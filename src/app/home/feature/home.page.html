@@ -6,7 +6,24 @@
 
 <ion-content>
   <app-detail-card
-    *ngIf="person$ | async as person"
+    *ngIf="person$ | async as person; else loading"
     [person]="person"
   ></app-detail-card>
+
+  <ng-template #loading>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-skeleton-text
+            animated
+            style="height: 25px; width: 50%"
+          ></ion-skeleton-text>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-skeleton-text animated></ion-skeleton-text>
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
 </ion-content>

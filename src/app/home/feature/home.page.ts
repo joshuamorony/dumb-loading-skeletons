@@ -10,7 +10,7 @@ import { Person } from 'src/app/shared/data-access/models/person';
 })
 export class HomePage {
   // Mock loading data with observable
-  person$: Observable<Person> = of({ name: 'Josh' }).pipe(delay(400));
+  person$: Observable<Person> = of({ name: 'Josh' }).pipe(delay(800));
 
   constructor() {}
 }
