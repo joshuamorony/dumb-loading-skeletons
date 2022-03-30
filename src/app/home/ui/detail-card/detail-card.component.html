@@ -1,4 +1,4 @@
-<ion-card>
+<ion-card *ngIf="person; else loading">
   <ion-card-header>
     <ion-card-title> Hi {{ person.name }}</ion-card-title>
   </ion-card-header>
@@ -6,3 +6,20 @@
     <p>I am a component that needs to wait for some input</p>
   </ion-card-content>
 </ion-card>
+
+<ng-template #loading>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <ion-skeleton-text
+          animated
+          style="height: 25px; width: 50%"
+        ></ion-skeleton-text>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-card-content>
+  </ion-card>
+</ng-template>
