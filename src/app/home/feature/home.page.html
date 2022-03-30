@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Loading Skeleton </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-detail-card
+    *ngIf="person$ | async as person"
+    [person]="person"
+  ></app-detail-card>
+</ion-content>
