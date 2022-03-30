@@ -1,0 +1,7 @@
+{
+  "name": "dumb-loading-skeletons",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
